@@ -9,9 +9,10 @@ const lista = [studentsNames, studentsGrades]
 // console.log(lista);
 
 function showNameAndGrade(student) {
-    if (lista[0].includes(student)){
-        const indexOfStudent = lista[0].indexOf(student);
-        const avgGrade = lista[1][indexOfStudent]
+    const [studentsList, avgGradeList] = lista  // Desestruturação de lista
+    if (studentsList.includes(student)){
+        const indexOfStudent = studentsList.indexOf(student);
+        const avgGrade = avgGradeList[indexOfStudent]
         console.log(`Nota de ${student}: ${avgGrade}`);
     }
     else {
